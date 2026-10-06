@@ -1,0 +1,67 @@
+{
+  "product": "MoneroAI",
+  "assistant": "Naya",
+  "version": "3.0.0-beta1",
+  "build_stage": "commercial_private_beta",
+  "wake_phrase": "Hey Naya",
+  "inference": {
+    "provider": "local_ollama",
+    "host": "http://127.0.0.1:11434",
+    "text_and_deep_model": "qwen3:8b",
+    "fast_voice_model": "qwen3:1.7b",
+    "voice_model_timeout_seconds": 2.25
+  },
+  "google_access": {
+    "mode": "read_only",
+    "normal_startup_interactive": false,
+    "authorization_deferred": true,
+    "first_release_services": ["calendar", "gmail", "drive"]
+  },
+  "commercial_release": {
+    "levels": 3,
+    "plans": ["core", "plus", "sovereign"],
+    "prices_xaf_month": [0, 2500, 5000],
+    "included_conversations_month": [100, 500, 1500],
+    "prepaid_overage_xaf": 10,
+    "hidden_charges": false,
+    "hybrid_capacity_gb": [512, 2048, 5120],
+    "listening_mode": "wake_phrase_only",
+    "ambient_recording": false,
+    "payment_provider": "manual_momo_then_mtn_momo_collections"
+  },
+  "validation": {
+    "non_voice_complete": true,
+    "voice_tuning_implemented": true,
+    "zira_primary_voice_implemented": true,
+    "azure_speech_removed": true,
+    "piper_runtime_deferred": true,
+    "piper_startup_and_response_wait_removed": true,
+    "fast_voice_model_routing_implemented": true,
+    "separate_voice_stage_timing_implemented": true,
+    "false_positive_timeout_test_removed": true,
+    "voice_hardware_retest_required": true,
+    "google_authorization_deferred": true
+  },
+  "voice": {
+    "speech_model": "tiny.en",
+    "beam_size": 1,
+    "preloaded_before_listening": true,
+    "maximum_response_delay_seconds": 5.0,
+    "transcription_timeout_seconds": 1.75,
+    "fast_ai_model": "qwen3:1.7b",
+    "fast_ai_timeout_seconds": 2.25,
+    "fast_ai_max_tokens": 32,
+    "primary_provider": "Microsoft Zira Desktop",
+    "provider_id": "local_zira",
+    "engine": "Windows SAPI5 through pyttsx3",
+    "runtime_network_required": false,
+    "piper_runtime_enabled": false,
+    "piper_wait_seconds": 0.0,
+    "voice_rate": 165,
+    "cloud_credentials_required": true,
+    "cloud_provider": "cloudflare_r2",
+    "cloud_encryption": "AES-256-GCM",
+    "android_application_id": "cm.nexora.naya",
+    "mobile_pairing_required": true
+  }
+}

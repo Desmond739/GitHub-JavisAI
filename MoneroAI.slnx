@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MoneroAI.Api/MoneroAI.Api.csproj" />
+    <Project Path="src/MoneroAI.Application/MoneroAI.Application.csproj" />
+    <Project Path="src/MoneroAI.Domain/MoneroAI.Domain.csproj" />
+    <Project Path="src/MoneroAI.Infrastructure/MoneroAI.Infrastructure.csproj" />
+  </Folder>
+</Solution>

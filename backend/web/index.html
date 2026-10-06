@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101828"><title>Naya · MoneroAI</title>
+  <link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="authPanel" class="auth" hidden><div class="auth-card"><span class="orb">N</span><h1>Welcome to Naya</h1><p>Create an account or sign in. Charges are never hidden: each plan includes a monthly allowance, then optional prepaid use costs 10 XAF per message.</p><input id="authName" maxlength="80" placeholder="Display name (for registration)"><input id="authEmail" type="email" maxlength="254" placeholder="Email"><input id="authPassword" type="password" minlength="10" maxlength="200" placeholder="Password (10+ characters, letter + number)"><p id="authError" class="error"></p><div class="auth-actions"><button id="registerButton" class="primary">Create account</button><button id="loginButton">Sign in</button></div></div></section>
+  <div id="appShell" hidden>
+  <header><div><span class="orb">N</span><b>Naya</b><small>Personal AI, under your control</small></div><span id="connection" class="pill">Connecting</span></header>
+  <nav><button data-view="home" class="active">Home</button><button data-view="chat">Chat</button><button data-view="tasks">Tasks</button><button data-view="connections">Connections</button><button data-view="account">Account</button></nav>
+  <main>
+    <section id="home" class="view active">
+      <div class="hero"><p id="welcome" class="eyebrow">GOOD TO SEE YOU</p><h1>How can I help?</h1><p>Say <strong>“Hey Naya”</strong> or type a request. Background listening is wake-phrase only.</p><button id="talk" class="primary">🎙 Start Naya session</button><p id="notice"></p></div>
+      <div class="grid"><article><h2>Today</h2><p id="privacy">Loading privacy status…</p></article><article><h2>Storage</h2><p id="storage">Loading…</p></article><article><h2>Suggestions</h2><div id="suggestions">No new suggestions.</div></article></div>
+    </section>
+    <section id="chat" class="view"><h1>Chat with Naya</h1><div id="messages" class="messages"><p class="naya">I’m ready. What would you like to do?</p></div><form id="chatForm"><input id="message" maxlength="4000" placeholder="Message Naya…" required><button class="primary">Send</button></form></section>
+    <section id="tasks" class="view"><h1>Tasks</h1><p>Sensitive actions wait for your confirmation. Completed work appears in notifications.</p><div id="jobs" class="cards">No queued tasks.</div></section>
+    <section id="connections" class="view"><h1>Connections</h1><p>First release: read-only Google access. Naya cannot send, change, or delete Google data.</p><div id="connectors" class="cards"></div></section>
+    <section id="account" class="view"><h1>Plans & wallet</h1><p id="wallet">Loading account…</p><button id="topUpButton" class="primary">Top up wallet</button><p>Hybrid capacity combines storage on your devices with included encrypted cloud storage. Overage is optional, prepaid, and always shown before use.</p><div id="plans" class="plans"></div><h2>MTN MoMo</h2><p id="momo">Loading payment status…</p><button id="logoutButton">Sign out</button></section>
+  </main>
+  <footer><span>Wake phrase only</span><span>Local AI</span><span>Owner confirmation</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body></html>

@@ -1,0 +1,32 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+backend/.env
+backend/'.env'.txt
+backend/data/personal_data/google/credentials.json
+backend/data/personal_data/google/*_token.json
+
+# Personal data that must stay local
+backend/data/goals/
+backend/data/knowledge_graph/
+backend/data/memory/
+backend/data/notes/
+backend/data/tasks/
+backend/data/personal_data/approved_folders.json
+backend/data/personal_data/personal_data*.json
+backend/data/personal_data/google/*_sync_state.json
+backend/data/logs/
+backend/data/voice_models/
+backend/data/platform/
+backend/data/cloud/
+
+# Local environments and generated output
+backend/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/bin/
+**/obj/
+*.jks
+*.keystore
+keystore.properties
